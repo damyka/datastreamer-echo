@@ -1,0 +1,14 @@
+[Unit]
+Description=Data Streamer Echo
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u main.py
+WorkingDirectory=/opt/datastreamer
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
